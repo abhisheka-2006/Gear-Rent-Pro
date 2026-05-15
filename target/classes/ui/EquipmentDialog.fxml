@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.Priority?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.gearrent.controller.EquipmentDialogController">
+    <content>
+        <GridPane hgap="10" vgap="10" padding="20">
+            <columnConstraints>
+                <ColumnConstraints minWidth="140" halignment="RIGHT" />
+                <ColumnConstraints hgrow="Priority.ALWAYS" />
+            </columnConstraints>
+
+            <Label text="Equipment Code" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <TextField fx:id="equipmentCodeField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label text="Category" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <ComboBox fx:id="categoryBox" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label text="Branch" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <ComboBox fx:id="branchBox" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label text="Brand" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <TextField fx:id="brandField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+            <Label text="Model" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+            <TextField fx:id="modelField" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+            <Label text="Purchase Year" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+            <TextField fx:id="purchaseYearField" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+            <Label text="Daily Base Price" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+            <TextField fx:id="dailyPriceField" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+            <Label text="Security Deposit" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+            <TextField fx:id="depositField" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+            <Label text="Status" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+            <ComboBox fx:id="statusBox" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+        </GridPane>
+    </content>
+    <buttonTypes>
+        <ButtonType fx:constant="OK" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

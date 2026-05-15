@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
+ 
+ <VBox xmlns:fx="http://javafx.com/fxml"
+       fx:controller="com.gearrent.controller.OverdueController"
+       spacing="10" style="-fx-padding:20;">
+   <Label text="Overdue Rentals"
+          style="-fx-font-size:18;-fx-font-weight:bold;-fx-text-fill:#D32F2F;"/>
+   <Button text="Refresh" onAction="#handleRefresh"
+           style="-fx-background-color:#F57C00;-fx-text-fill:white;"/>
+   <TableView fx:id="overdueTable" VBox.vgrow="ALWAYS">
+     <columns>
+       <TableColumn fx:id="rentalIdCol"   text="ID"        prefWidth="50"/>
+       <TableColumn fx:id="customerCol"   text="Customer"  prefWidth="150"/>
+       <TableColumn fx:id="equipmentCol"  text="Equipment" prefWidth="180"/>
+       <TableColumn fx:id="branchCol"     text="Branch"    prefWidth="120"/>
+       <TableColumn fx:id="endDateCol"    text="Due Date"  prefWidth="100"/>
+       <TableColumn fx:id="daysOverdueCol" text="Days Overdue" prefWidth="100"/>
+       <TableColumn fx:id="contactCol"    text="Contact"   prefWidth="120"/>
+     </columns>
+   </TableView>
+   <Label fx:id="errorLabel" text="" wrapText="true"/>
+ </VBox>

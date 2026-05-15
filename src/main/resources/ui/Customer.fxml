@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.gearrent.controller.CustomerController"
+      spacing="10" style="-fx-padding:20;">
+  <Label text="Customer Management"
+         style="-fx-font-size:18;-fx-font-weight:bold;"/>
+
+  <HBox spacing="8">
+    <TextField fx:id="searchField" promptText="Search name, NIC, contact" HBox.hgrow="ALWAYS"/>
+    <ComboBox fx:id="membershipFilterBox" promptText="Membership"/>
+    <Button fx:id="btnRefresh" text="Refresh" onAction="#handleRefresh"/>
+  </HBox>
+
+  <TableView fx:id="customerTable" VBox.vgrow="ALWAYS">
+    <columns>
+      <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+      <TableColumn fx:id="nameCol" text="Name" prefWidth="160"/>
+      <TableColumn fx:id="nicCol" text="NIC/Passport" prefWidth="130"/>
+      <TableColumn fx:id="contactCol" text="Contact" prefWidth="120"/>
+      <TableColumn fx:id="emailCol" text="Email" prefWidth="160"/>
+      <TableColumn fx:id="membershipCol" text="Membership" prefWidth="110"/>
+      <TableColumn fx:id="addressCol" text="Address" prefWidth="190"/>
+    </columns>
+  </TableView>
+
+  <HBox spacing="8">
+    <Button fx:id="btnAdd" text="Add" onAction="#handleAdd"/>
+    <Button fx:id="btnEdit" text="Edit" onAction="#handleEdit" disable="true"/>
+    <Button fx:id="btnDelete" text="Delete" onAction="#handleDelete" disable="true"/>
+    <Label fx:id="statsLabel" text=""/>
+  </HBox>
+
+  <Label fx:id="errorLabel" text="" wrapText="true"/>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.gearrent.controller.EquipmentController"
+      spacing="10" style="-fx-padding:20;">
+  <Label text="Equipment Management"
+         style="-fx-font-size:18;-fx-font-weight:bold;"/>
+
+  <HBox spacing="8">
+    <TextField fx:id="searchField" promptText="Search code, brand, model" HBox.hgrow="ALWAYS"/>
+    <ComboBox fx:id="statusFilterBox" promptText="Status"/>
+    <ComboBox fx:id="branchFilterBox" promptText="Branch"/>
+    <Button fx:id="btnRefresh" text="Refresh" onAction="#handleRefresh"/>
+  </HBox>
+
+  <TableView fx:id="equipmentTable" VBox.vgrow="ALWAYS">
+    <columns>
+      <TableColumn fx:id="idCol" text="ID" prefWidth="55"/>
+      <TableColumn fx:id="codeCol" text="Code" prefWidth="110"/>
+      <TableColumn fx:id="brandCol" text="Brand" prefWidth="120"/>
+      <TableColumn fx:id="modelCol" text="Model" prefWidth="130"/>
+      <TableColumn fx:id="categoryCol" text="Category" prefWidth="120"/>
+      <TableColumn fx:id="branchCol" text="Branch" prefWidth="120"/>
+      <TableColumn fx:id="priceCol" text="Daily Price" prefWidth="95"/>
+      <TableColumn fx:id="depositCol" text="Deposit" prefWidth="95"/>
+      <TableColumn fx:id="statusCol" text="Status" prefWidth="140"/>
+    </columns>
+  </TableView>
+
+  <HBox spacing="8">
+    <Button fx:id="btnAdd" text="Add" onAction="#handleAdd"/>
+    <Button fx:id="btnEdit" text="Edit" onAction="#handleEdit" disable="true"/>
+    <Button fx:id="btnDelete" text="Delete" onAction="#handleDelete" disable="true"/>
+    <Label fx:id="errorLabel" text="" wrapText="true"/>
+  </HBox>
+</VBox>

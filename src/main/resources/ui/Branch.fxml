@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.gearrent.controller.BranchController"
+      spacing="12" style="-fx-padding: 20;">
+
+    <Label text="Manage Branches"
+           style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #1F3864;"/>
+
+    <HBox spacing="10">
+        <Button fx:id="btnAdd" text="Add" onAction="#handleAdd"
+                style="-fx-background-color: #2E75B6; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button fx:id="btnEdit" text="Edit" onAction="#handleEdit" disable="true"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button fx:id="btnDelete" text="Delete" onAction="#handleDelete" disable="true"
+                style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <TableView fx:id="branchTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="codeCol" text="Code" prefWidth="80"/>
+            <TableColumn fx:id="nameCol" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="addressCol" text="Address" prefWidth="250"/>
+            <TableColumn fx:id="contactCol" text="Contact" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="errorLabel" text="" wrapText="true"/>
+</VBox>

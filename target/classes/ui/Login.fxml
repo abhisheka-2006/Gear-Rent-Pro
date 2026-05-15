@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
+ <?import javafx.geometry.Insets?>
+ 
+ <VBox xmlns:fx="http://javafx.com/fxml"
+       fx:controller="com.gearrent.controller.LoginController"
+       alignment="CENTER" spacing="14"
+       style="-fx-background-color: #1F3864;">
+   <padding><Insets top="50" right="60" bottom="50" left="60"/></padding>
+ 
+   <Label text="GearRent Pro"
+          style="-fx-font-size:28;-fx-font-weight:bold;-fx-text-fill:white;"/>
+   <Label text="Equipment Rental System"
+          style="-fx-font-size:13;-fx-text-fill:#aaaacc;"/>
+ 
+   <VBox spacing="8" style="-fx-background-color:white;
+         -fx-background-radius:8;-fx-padding:24;">
+     <Label text="Username" style="-fx-font-weight:bold;"/>
+     <TextField fx:id="usernameField" promptText="Enter username"
+                prefWidth="280"/>
+     <Label text="Password" style="-fx-font-weight:bold;"/>
+     <PasswordField fx:id="passwordField" promptText="Enter password"/>
+     <Button text="Login" onAction="#handleLogin"
+             prefWidth="280"
+             style="-fx-background-color:#2E75B6;-fx-text-fill:white;
+                    -fx-font-weight:bold;-fx-padding:8;"/>
+     <Label fx:id="errorLabel" text="" wrapText="true"
+            style="-fx-text-fill:red;"/>
+   </VBox>
+ </VBox>

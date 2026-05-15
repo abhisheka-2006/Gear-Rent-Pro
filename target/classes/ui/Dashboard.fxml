@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gearrent.controller.DashboardController"
+            stylesheets="@dashboard.css"
+            prefWidth="1200" prefHeight="700">
+
+  <left>
+    <VBox styleClass="sidebar" prefWidth="280">
+      <HBox styleClass="sidebar-header">
+        <Label text="GearRent Pro" styleClass="sidebar-title"/>
+      </HBox>
+
+      <ScrollPane fitToWidth="true" style="-fx-border-color: transparent; -fx-padding: 0;">
+        <VBox spacing="8" style="-fx-padding: 15;">
+          <Label text="EQUIPMENT" styleClass="sidebar-section-title"/>
+          <Button text="Manage Equipment" onAction="#openEquipment" styleClass="nav-button"/>
+
+          <Label text="CUSTOMERS" styleClass="sidebar-section-title"/>
+          <Button text="Manage Customers" onAction="#openCustomers" styleClass="nav-button"/>
+
+          <Label text="RENTALS" styleClass="sidebar-section-title"/>
+          <Button text="Create Rental" onAction="#openRentals" styleClass="nav-button"/>
+          <Button text="Process Return" onAction="#openReturns" styleClass="nav-button"/>
+          <Button text="Overdue Rentals" onAction="#openOverdue" styleClass="nav-button"/>
+
+          <Label text="ADMIN" styleClass="sidebar-section-title"/>
+          <Button fx:id="menuBranches" text="Manage Branches" onAction="#openBranches" styleClass="nav-button"/>
+
+          <Label text="REPORTS" styleClass="sidebar-section-title"/>
+          <Button text="View Reports" onAction="#openReports" styleClass="nav-button"/>
+
+          <Region VBox.vgrow="ALWAYS"/>
+          <Button text="Logout" styleClass="nav-button-logout" onAction="#logout"/>
+        </VBox>
+      </ScrollPane>
+    </VBox>
+  </left>
+
+  <top>
+    <HBox styleClass="top-bar">
+      <Label text="Dashboard" styleClass="page-title" HBox.hgrow="ALWAYS"/>
+      <Label fx:id="userGreeting" text="Welcome, Admin" styleClass="user-greeting"/>
+    </HBox>
+  </top>
+
+  <center>
+    <BorderPane fx:id="mainPane">
+      <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 40;">
+          <Label text="Welcome to GearRent Pro" styleClass="welcome-title"/>
+          <Label text="Select an option from the sidebar to get started" styleClass="welcome-subtitle"/>
+        </VBox>
+      </center>
+    </BorderPane>
+  </center>
+</BorderPane>

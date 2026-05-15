@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.layout.*?>
+ <?import javafx.geometry.Insets?>
+ 
+ <VBox xmlns:fx="http://javafx.com/fxml"
+       fx:controller="com.gearrent.controller.ReturnController"
+       spacing="12" style="-fx-padding:20;">
+   <Label text="Process Return"
+          style="-fx-font-size:18;-fx-font-weight:bold;"/>
+   <GridPane hgap="10" vgap="10">
+     <Label text="Active Rental:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+     <ComboBox fx:id="rentalBox" GridPane.rowIndex="0"
+               GridPane.columnIndex="1" prefWidth="300"/>
+     <Label text="Return Date:"  GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+     <DatePicker fx:id="returnDatePicker" GridPane.rowIndex="1"
+                 GridPane.columnIndex="1"/>
+     <CheckBox fx:id="damagedCheckBox" text="Equipment Damaged?"
+               GridPane.rowIndex="2" GridPane.columnIndex="0"
+               GridPane.columnSpan="2"/>
+     <Label text="Damage Charge (LKR):" GridPane.rowIndex="3"
+            GridPane.columnIndex="0"/>
+     <TextField fx:id="damageChargeField" GridPane.rowIndex="3"
+                GridPane.columnIndex="1"/>
+     <Label text="Damage Description:" GridPane.rowIndex="4"
+            GridPane.columnIndex="0"/>
+     <TextArea fx:id="damageDescArea" GridPane.rowIndex="4"
+               GridPane.columnIndex="1" prefHeight="60"/>
+   </GridPane>
+   <Button text="Process Return" onAction="#handleProcessReturn"
+           style="-fx-background-color:#D32F2F;-fx-text-fill:white;
+                  -fx-font-weight:bold;-fx-padding:8 20;"/>
+   <Label fx:id="lateFeeLabel"    text="" style="-fx-font-weight:bold;"/>
+   <Label fx:id="settlementLabel" text="" style="-fx-font-size:14;
+          -fx-font-weight:bold;"/>
+   <Label fx:id="errorLabel"      text="" wrapText="true"/>
+ </VBox>
