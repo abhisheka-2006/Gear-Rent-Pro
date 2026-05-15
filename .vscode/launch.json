@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "com.gearrent.Main",
+      "projectName": "gearrentpro",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "java",
+      "name": "Run GearRentPro Main",
+      "request": "launch",
+      "mainClass": "com.gearrent.Main",
+      "projectName": "gearrentpro",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

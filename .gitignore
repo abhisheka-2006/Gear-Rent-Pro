@@ -1,0 +1,5 @@
+src/main/resources/db.properties
+ target/
+ *.class
+ .idea/
+ *.iml
