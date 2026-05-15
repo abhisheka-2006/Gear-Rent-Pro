@@ -1,0 +1,9 @@
+2026-04-08 13:29:27.670464+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "membership_config" not found (this database is empty); SQL statement:
+INSERT INTO membership_config VALUES ('REGULAR',0),('SILVER',5),('GOLD',10) [42104-224]
+2026-04-08 21:17:46.298944+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "branch" already exists; SQL statement:
+CREATE TABLE branch ( branch_id   INT AUTO_INCREMENT PRIMARY KEY, branch_code VARCHAR(10)  NOT NULL UNIQUE, name        VARCHAR(100) NOT NULL, address     VARCHAR(255), contact     VARCHAR(20) ) [42101-224]
+2026-04-08 21:35:23.026052+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "branch" already exists; SQL statement:
+CREATE TABLE branch ( branch_id   INT AUTO_INCREMENT PRIMARY KEY, branch_code VARCHAR(10)  NOT NULL UNIQUE, name        VARCHAR(100) NOT NULL, address     VARCHAR(255), contact     VARCHAR(20) ) [42101-224]
